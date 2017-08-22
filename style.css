@@ -1,0 +1,325 @@
+/*
+Theme Name: Photography
+Author: Zach Mitchell
+Description: Photography portfolio template built with bootstrap.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EFF1F3;
+    color: #555;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.avatar-64 {
+    max-width: none;
+    max-height: none;
+}
+
+a {
+    color: #555;
+}
+
+.showcase {
+    background-image: url('img/exposure-pic.jpg');
+    background-position: center left;
+    background-size: cover;
+    margin-top: -32px;
+}
+
+.showcase .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #191B3D;
+    opacity: .90;
+}
+
+.showcase h1 {
+    margin-top: -40px;
+    color: #FFE066;
+    position: relative;
+    font-family: 'Yellowtail', helvetica;
+    font-size: 55px;
+}
+
+.masthead {
+    position: absolute;
+    bottom: 0;
+    background-color: #EFF1F3;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.25);
+}
+
+.masthead a {
+    color: #555;
+}
+
+.masthead button {
+    margin-top: 5px;
+}
+
+.masthead .mobile-brand {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.masthead .camera {
+    width: 75px;
+    border-right: 1px solid #ccc;
+    display: none !important;
+}
+
+.masthead .camera .icon {
+    font-size: 24px;
+}
+
+.masthead li {
+    font-weight: 600;
+}
+
+.masthead .arrow {
+    width: 75px;
+    cursor: pointer;
+    display: none !important;
+}
+
+.masthead .arrow .icon {
+    font-size: 28px;
+}
+
+.portfolio h2 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.portfolio hr {
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+}
+
+.portfolio ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0
+}
+
+.portfolio li {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.gallery .image p {
+    padding: 0;
+    margin: 0;
+}
+
+.gallery .image-wrap {
+    padding: 14px;
+}
+
+.gallery .image {
+    position: relative;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.gallery .alignnone {
+    height: 280px;
+}
+
+.gallery .image:hover .overlay {
+    opacity: .9;
+}
+
+.gallery .image:hover .content {
+    opacity: 1;
+}
+
+.gallery .overlay {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #191B3D;
+    opacity: 0;
+}
+
+.gallery .content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 80%;
+    height: 90px;
+    margin: auto;
+    color: white;
+    opacity: 0;
+}
+
+.gallery .content h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.gallery .content p {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.gallery .content p::after {
+    content: '/';
+    padding-left: 5px;
+}
+
+.gallery .content p:last-of-type::after {
+    display: none;
+}
+
+.gallery .search {
+    color: #FFE066;
+    font-size: 22px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100;
+    cursor: zoom-out;
+}
+
+.lightbox .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .9;
+}
+
+.lightbox img {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+    border-radius: 3px;
+}
+
+.mastfoot ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.mastfoot li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #191B3D;
+    cursor: pointer;
+}
+
+.mastfoot p {
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .portfolio h2 {
+        font-size: 32px;
+    }
+
+    .portfolio br {
+        display: none;
+    }
+    
+    .portfolio li {
+        margin: 5px 20px;
+        font-size: 17px;
+    }
+
+    .gallery .alignnone {
+        height: 380px;
+    }
+
+    .mastfoot li {
+        font-size: 20px;
+        margin: 20px 40px;
+    }
+
+    .mastfoot p {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        height: 50px;
+    }
+
+    .masthead li {
+        border-left: 1px solid #ccc;
+        width: 135px;
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .masthead .camera {
+        display: flex !important;
+    }
+
+    .masthead .arrow {
+        display: flex !important;
+    }
+
+    .showcase h1 {
+        font-size: 70px;
+    }
+
+    .portfolio h2 {
+        font-size: 36px;
+    }
+
+    .masthead .mobile-brand {
+        display: none;
+    }
+
+    .gallery .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .gallery .alignnone {
+        height: 240px;
+    }
+}
+
